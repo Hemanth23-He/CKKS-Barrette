@@ -1,6 +1,5 @@
 """A module to keep track of a plaintext."""
 """A module to keep track of a plaintext."""
-
 class Plaintext:
     """An instance of a plaintext.
     This is a wrapper class for a plaintext, which consists
