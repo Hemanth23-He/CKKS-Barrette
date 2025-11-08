@@ -1,22 +1,21 @@
 """A module to keep track of a ciphertext."""
 
+"""A module to keep track of a ciphertext."""
+
+from util.barrette import BarrettReducer  # Use MontgomeryReducer if preferred
+
 class Ciphertext:
-
     """An instance of a ciphertext.
-
     This is a wrapper class for a ciphertext, which consists
-    of two polynomial.
-
+    of two polynomials.
     Attributes:
         c0 (Polynomial): First element of ciphertext.
         c1 (Polynomial): Second element of ciphertext.
         scaling_factor (float): Scaling factor.
         modulus (int): Ciphertext modulus.
     """
-
     def __init__(self, c0, c1, scaling_factor=None, modulus=None):
         """Sets ciphertext to given polynomials.
-
         Args:
             c0 (Polynomial): First element of ciphertext.
             c1 (Polynomial): Second element of ciphertext.
@@ -30,8 +29,14 @@ class Ciphertext:
 
     def __str__(self):
         """Represents Ciphertext as a string.
-
         Returns:
             A string which represents the Ciphertext.
         """
         return 'c0: ' + str(self.c0) + '\n + c1: ' + str(self.c1)
+
+    # Example method to modularly reduce both polynomials
+    # def modular_reduce(self):
+    #     if self.modulus:
+    #         reducer = BarrettReducer(self.modulus)
+    #         self.c0 = self.c0.mod(self.modulus)
+    #         self.c1 = self.c1.mod(self.modulus)
