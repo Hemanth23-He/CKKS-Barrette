@@ -2,7 +2,7 @@
 
 """A module to keep track of a ciphertext."""
 
-from util.barrette import BarrettReducer  # Use MontgomeryReducer if preferred
+from util.montgomery import MontgomeryReducer  # Use MontgomeryReducer if preferred
 
 class Ciphertext:
     """An instance of a ciphertext.
