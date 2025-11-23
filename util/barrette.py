@@ -1,4 +1,4 @@
-class BarretteReducer:
+class BarrettReducer:
     def __init__(self, modulus):
         self.modulus = modulus
         self.r = 1 << (modulus.bit_length() + 1)  # R > modulus
