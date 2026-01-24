@@ -12,13 +12,13 @@ class BarrettReducer:
         if r < 0:
             r += self.modulus
         return r
-
-
+    
     def inverse(self, x):
-    a, b = x % self.modulus, self.modulus
-    u0, u1 = 1, 0
-    while b:
-        q = a // b
-        a, b = b, a - q * b
-        u0, u1 = u1, u0 - q * u1
-    return u0% self.modulus
+        # Modular inverse using extended Euclidean algorithm
+        # Returns y such that (x * y) % modulus == 1
+        a, b, u = x, self.modulus, 1
+        while b != 0:
+            t = a // b
+            a, b = b, a - t * b
+            u = u - t * u
+        return u % self.modulus
