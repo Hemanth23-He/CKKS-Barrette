@@ -12,7 +12,7 @@ class BarrettReducer:
         if r < 0:
             r += self.modulus
         return r
-     def inverse(self, x):
+    def inverse(self, x):
         a, b = x % self.modulus, self.modulus
         u0, u1 = 1, 0
         while b:
