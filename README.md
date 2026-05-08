@@ -1,5 +1,5 @@
 # py-fhe
-A Python 3 library for fully homomorphic encryption. Currently, this library includes an implementation of the Brakerski-Fan-Vercauteren (BFV) scheme, the Cheon-Kim-Kim-Song (CKKS) scheme, and bootstrapping for CKKS.
+A Python 3 library for fully homomorphic encryption. Currently, this library includes an implementation of the Cheon-Kim-Kim-Song (CKKS) scheme, and bootstrapping for CKKS.
 
 ## Installation
 
